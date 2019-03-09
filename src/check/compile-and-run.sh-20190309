@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+source=$1
+target=xy
+
+function myecho {
+
+	echo " ---> $1"
+	command=$1
+	$command
+	echo
+}
+
+# start from here
+	myecho "rm $target"
+
+	myecho "g++ $source -o $target"
+
+	myecho "./$target"
